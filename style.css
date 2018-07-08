@@ -1,0 +1,274 @@
+*
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.header
+{
+    width: 100%;
+    display: block;
+    background: #fff;
+    padding: 10px 0;
+}
+
+.header__wrapper
+{
+    width: 100%;
+    max-width: 1170px;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo
+{
+    flex: 0 0 auto;
+}
+
+.header__logo-lnk
+{
+    width: 100%;
+    display: block;
+    font-size: 24px;
+    color: #666;
+    text-decoration: none;
+    transition: color .5s ease-in;
+}
+
+.header__logo-lnk:visited
+{
+    color: #666;
+}
+
+.header__logo-lnk:hover
+{
+    color: #333;
+}
+
+.header__nav
+{
+    position: relative;
+    flex: 1 1 auto;
+    text-align: right;
+}
+
+.header__nav-toogle
+{
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .header__nav-toogle
+    {
+        display: block;
+    }
+}
+
+.header__nav-list
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    line-height: 53px;
+}
+
+.header__nav-list-item:not(:last-child)
+{
+    margin-right: 24px;
+}
+
+.header__nav-link,
+.header__nav-link:visited
+{
+    font-size: 13px;
+    color: #666;
+    text-decoration: none;
+}
+
+.header__nav-link:hover
+{
+    color: #333;
+}
+
+@media (max-width: 800px) {
+    .header__nav-list
+    {
+        display: none;
+    }
+
+    .header__nav-toogle:target + .header__nav-list
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.main-block
+{
+    width: 100%;
+    height: 100vh;
+    /* display: block;
+    text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-block__content
+{
+    width: 100%;
+    max-width: 1170px;
+    display: block;
+    /* margin: 0 auto; */
+}
+
+.main-block__title
+{
+    color: #fff;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 64px;
+    text-align: center;
+    margin: 0 auto 24px;
+    width: 100%;
+    max-width: 820px;
+    display: block;
+}
+
+.main-block__description
+{
+    color: #fff;
+    margin: 0 auto 24px;
+    width: 100%;
+    max-width: 820px;
+    display: block;
+    text-align: center;
+}
+
+.main-block__action
+{
+    background: #745cf9;
+    border: 2px solid #745cf9;
+    padding: 13px 26px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 24px;
+    text-align: center;
+    min-width: 200px;
+    text-decoration: none;
+    display: block;
+    transition: all .5s ease-in;
+    font-weight: 700;
+}
+
+.main-block__action:hover
+{
+    background: #5d47d7;
+    border-color: #5d47d7;
+}
+
+.main-block__action:not(:first-child)
+{
+    margin-left: 24px;
+}
+
+.main-block__action--additional
+{
+    background: transparent;
+    border-color: #fff;
+}
+
+.main-block__action--additional:hover
+{
+    color: #222;
+    background: #fff;
+    border-color: #fff;
+}
+
+.main-block__actions
+{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 820px;
+}
+
+.change-everything
+{
+    background: url('https://cdn.colorlib.com/shapely/wp-content/uploads/sites/12/2016/03/photo-1443527216320-7e744084f5a7-1.jpg') center center no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.project-gallery
+{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.project-gallery__item
+{
+    display: block;
+    flex: 0 0 25%;
+}
+
+.project-gallery__item-lnk
+{
+    display: block;
+    position: relative;
+    height: 0;
+    padding-top: 66%;
+}
+
+.project-gallery__item-img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-gallery__item-title
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+    font-size: 22px;
+    line-height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity .5s ease-in;
+}
+
+.project-gallery__item-lnk:hover .project-gallery__item-title
+{
+    opacity: 1;
+}
